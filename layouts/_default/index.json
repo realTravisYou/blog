@@ -1,0 +1,17 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range site.RegularPages -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $cats := .Params.categories | default slice -}}
+    {{- $tags := .Params.tags | default slice -}}
+    {{- if reflect.IsSlice $cats -}}
+    {{- else -}}
+    {{- $cats = slice $cats -}}
+    {{- end -}}
+    {{- if reflect.IsSlice $tags -}}
+    {{- else -}}
+    {{- $tags = slice $tags -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" (.Summary | plainify) "date" (.Date.Format "2006-01-02") "categories" $cats "tags" $tags) -}}
+    {{- end }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
