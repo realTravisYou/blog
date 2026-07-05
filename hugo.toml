@@ -16,7 +16,7 @@ theme = 'PaperMod'
 
 [params.homeInfoParams]
   Title = 'About Me'
-  Content = '欢迎来到我的个人博客！我在这里分享技术文章、学习笔记和生活感悟。'
+  Content = '欢迎来到YouTao的个人博客！我在这里分享技术文章、学习笔记和生活感悟。'
 
 [params.favicon]
   small = '/favicon.ico'
