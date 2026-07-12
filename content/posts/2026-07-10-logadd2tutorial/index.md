@@ -147,5 +147,5 @@ IF bWarn THEN
 END_IF
 ```
 日志记录查看如图所示。
-![在codesys中日志查看界面](.\images\codesysLogInfoPage.png)
+![在codesys中日志查看界面](images/codesysLogInfoPage.png)
 
