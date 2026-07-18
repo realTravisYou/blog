@@ -1,4 +1,4 @@
-baseURL = 'https://www.youtao.website/'
+baseURL = 'https://blog.youtao.website/'
 locale = 'zh-cn'
 title = 'My Blog'
 theme = 'PaperMod'
